@@ -4,6 +4,7 @@ import { ArrowRight, BookOpen, Users, Compass, Award, Shield } from 'lucide-reac
 
 import heroImg from '@assets/WhatsApp_Image_2026-07-24_at_10.57.40_AM_1784871104967.jpeg';
 import vedicFireImg from '@assets/generated_images/vedic_fire.jpg';
+import classroomImg from '@assets/generated_images/school_classroom.jpg';
 
 export default function Home() {
   const FADE_UP = {
@@ -18,78 +19,90 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full bg-noise">
       {/* HERO SECTION */}
-      <section className="relative min-h-screen flex items-center bg-secondary pt-20 overflow-hidden">
-        {/* Background subtle pattern */}
-        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }} />
+      <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        {/* Full-screen background — real school photo */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={heroImg}
+            alt="Arya School Pundri"
+            className="w-full h-full object-cover object-center"
+          />
+          {/* Light left-side gradient only — photo stays visible on right */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-black/10" />
+        </div>
 
-        <div className="container relative z-10 mx-auto px-4 md:px-6 py-16">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="container relative z-10 mx-auto px-4 md:px-6 py-20">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
 
             {/* Left — Text */}
             <motion.div initial="hidden" animate="visible" variants={STAGGER}>
-              <motion.div variants={FADE_UP} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/20 border border-primary/30 text-primary text-sm font-medium mb-6">
+              <motion.div variants={FADE_UP} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/25 border border-primary/40 text-primary text-sm font-semibold mb-6">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                 Admissions Open for Session 2024-25
               </motion.div>
 
-              <motion.h2 variants={FADE_UP} className="font-hindi text-2xl md:text-3xl text-primary mb-3 font-semibold">
+              <motion.h2 variants={FADE_UP} className="font-hindi text-2xl md:text-3xl text-primary mb-3 font-semibold drop-shadow">
                 कृण्वन्तो विश्वमार्यम्
               </motion.h2>
 
-              <motion.h1 variants={FADE_UP} className="font-serif text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              <motion.h1 variants={FADE_UP} className="font-serif text-4xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
                 Where Vedic Values Meet Modern Education
               </motion.h1>
 
-              <motion.p variants={FADE_UP} className="text-base md:text-lg text-white/70 mb-8 leading-relaxed">
+              <motion.p variants={FADE_UP} className="text-base md:text-lg text-white/80 mb-8 leading-relaxed max-w-xl">
                 Arya School, Pundri — affiliated with Arya Samaj — nurtures young minds through academic excellence and character building. Classes 1st to 12th, Hindi &amp; English Medium.
               </motion.p>
 
               <motion.div variants={FADE_UP} className="flex flex-wrap gap-4">
-                <Link href="/admissions" className="inline-flex h-12 items-center justify-center rounded-lg bg-primary px-7 text-sm font-bold text-white transition-all hover:bg-primary/90 hover:shadow-lg hover:-translate-y-0.5">
+                <Link href="/admissions" className="inline-flex h-12 items-center justify-center rounded-lg bg-primary px-7 text-sm font-bold text-white transition-all hover:bg-primary/90 hover:shadow-xl hover:-translate-y-0.5">
                   Apply for Admission
                 </Link>
-                <Link href="/about" className="inline-flex h-12 items-center justify-center rounded-lg border border-white/30 px-7 text-sm font-semibold text-white transition-all hover:bg-white/10">
+                <Link href="/about" className="inline-flex h-12 items-center justify-center rounded-lg border border-white/40 backdrop-blur-sm px-7 text-sm font-semibold text-white transition-all hover:bg-white/15">
                   Discover Our Heritage
                 </Link>
               </motion.div>
 
-              {/* Stats row */}
-              <motion.div variants={FADE_UP} className="flex gap-8 mt-10 pt-8 border-t border-white/10">
+              <motion.div variants={FADE_UP} className="flex gap-8 mt-10 pt-8 border-t border-white/20">
                 {[
                   { value: '1916', label: 'Estd.' },
-                  { value: '12', label: 'Classes' },
+                  { value: '1–12', label: 'Classes' },
                   { value: '2', label: 'Mediums' },
                 ].map((s) => (
                   <div key={s.label}>
-                    <div className="font-serif text-3xl font-bold text-primary">{s.value}</div>
-                    <div className="text-white/50 text-sm mt-0.5">{s.label}</div>
+                    <div className="font-serif text-3xl font-bold text-primary drop-shadow">{s.value}</div>
+                    <div className="text-white/60 text-sm mt-0.5">{s.label}</div>
                   </div>
                 ))}
               </motion.div>
             </motion.div>
 
-            {/* Right — Real School Photo */}
+            {/* Right — Floating school scene card */}
             <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="relative"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="hidden lg:flex flex-col gap-4 items-end"
             >
-              {/* Decorative ring */}
-              <div className="absolute -inset-3 rounded-2xl border-2 border-primary/20" />
-              {/* Glow */}
-              <div className="absolute -inset-6 rounded-3xl bg-primary/5 blur-2xl" />
-
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
+              {/* Main classroom image card */}
+              <div className="relative w-72 rounded-2xl overflow-hidden shadow-2xl border border-white/20 backdrop-blur-sm">
                 <img
-                  src={heroImg}
-                  alt="Arya School Pundri Gate"
-                  className="w-full h-[480px] object-cover object-center"
+                  src={classroomImg}
+                  alt="School Classroom"
+                  className="w-full h-52 object-cover"
                 />
-                {/* Very subtle bottom label */}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-5">
-                  <p className="font-hindi text-white text-lg font-semibold">आर्य स्कूल, पूंडरी</p>
-                  <p className="text-white/70 text-sm">Estd. 1916 · Pundri, Kaithal, Haryana</p>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                  <p className="text-white font-semibold text-sm">Modern Classrooms</p>
+                  <p className="text-white/60 text-xs">Equipped for excellence</p>
+                </div>
+              </div>
+
+              {/* Info badge */}
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-5 py-4 w-64 shadow-lg">
+                <p className="font-hindi text-primary font-bold text-base mb-1">आर्य स्कूल, पूंडरी</p>
+                <p className="text-white/70 text-xs leading-relaxed">Pundri, Kaithal, Haryana 136042</p>
+                <div className="mt-3 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                  <span className="text-green-300 text-xs font-medium">Accepting Applications</span>
                 </div>
               </div>
             </motion.div>
