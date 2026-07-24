@@ -18,49 +18,83 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full bg-noise">
       {/* HERO SECTION */}
-      <section className="relative min-h-[90vh] flex items-center justify-center pt-20 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/70 to-secondary/40 z-10" />
-          <img 
-            src={heroImg} 
-            alt="Arya School Building" 
-            className="w-full h-full object-cover"
-          />
-        </div>
+      <section className="relative min-h-screen flex items-center bg-secondary pt-20 overflow-hidden">
+        {/* Background subtle pattern */}
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }} />
 
-        <div className="container relative z-20 mx-auto px-4 md:px-6">
-          <motion.div 
-            initial="hidden"
-            animate="visible"
-            variants={STAGGER}
-            className="max-w-3xl"
-          >
-            <motion.div variants={FADE_UP} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm mb-6">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              Admissions Open for Session 2024-25
+        <div className="container relative z-10 mx-auto px-4 md:px-6 py-16">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+            {/* Left — Text */}
+            <motion.div initial="hidden" animate="visible" variants={STAGGER}>
+              <motion.div variants={FADE_UP} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/20 border border-primary/30 text-primary text-sm font-medium mb-6">
+                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                Admissions Open for Session 2024-25
+              </motion.div>
+
+              <motion.h2 variants={FADE_UP} className="font-hindi text-2xl md:text-3xl text-primary mb-3 font-semibold">
+                कृण्वन्तो विश्वमार्यम्
+              </motion.h2>
+
+              <motion.h1 variants={FADE_UP} className="font-serif text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                Where Vedic Values Meet Modern Education
+              </motion.h1>
+
+              <motion.p variants={FADE_UP} className="text-base md:text-lg text-white/70 mb-8 leading-relaxed">
+                Arya School, Pundri — affiliated with Arya Samaj — nurtures young minds through academic excellence and character building. Classes 1st to 12th, Hindi &amp; English Medium.
+              </motion.p>
+
+              <motion.div variants={FADE_UP} className="flex flex-wrap gap-4">
+                <Link href="/admissions" className="inline-flex h-12 items-center justify-center rounded-lg bg-primary px-7 text-sm font-bold text-white transition-all hover:bg-primary/90 hover:shadow-lg hover:-translate-y-0.5">
+                  Apply for Admission
+                </Link>
+                <Link href="/about" className="inline-flex h-12 items-center justify-center rounded-lg border border-white/30 px-7 text-sm font-semibold text-white transition-all hover:bg-white/10">
+                  Discover Our Heritage
+                </Link>
+              </motion.div>
+
+              {/* Stats row */}
+              <motion.div variants={FADE_UP} className="flex gap-8 mt-10 pt-8 border-t border-white/10">
+                {[
+                  { value: '1916', label: 'Estd.' },
+                  { value: '12', label: 'Classes' },
+                  { value: '2', label: 'Mediums' },
+                ].map((s) => (
+                  <div key={s.label}>
+                    <div className="font-serif text-3xl font-bold text-primary">{s.value}</div>
+                    <div className="text-white/50 text-sm mt-0.5">{s.label}</div>
+                  </div>
+                ))}
+              </motion.div>
             </motion.div>
-            
-            <motion.h1 variants={FADE_UP} className="font-serif text-5xl md:text-7xl font-bold text-white mb-4 leading-tight">
-              Where Vedic Values Meet Modern Education
-            </motion.h1>
-            
-            <motion.h2 variants={FADE_UP} className="font-hindi text-3xl md:text-4xl text-primary mb-6 font-medium">
-              कृण्वन्तो विश्वमार्यम्
-            </motion.h2>
 
-            <motion.p variants={FADE_UP} className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl leading-relaxed">
-              Arya School, Pundri nurtures young minds through academic excellence, moral integrity, and character building, offering both Hindi and English mediums from classes 1st to 12th.
-            </motion.p>
+            {/* Right — Real School Photo */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="relative"
+            >
+              {/* Decorative ring */}
+              <div className="absolute -inset-3 rounded-2xl border-2 border-primary/20" />
+              {/* Glow */}
+              <div className="absolute -inset-6 rounded-3xl bg-primary/5 blur-2xl" />
 
-            <motion.div variants={FADE_UP} className="flex flex-wrap gap-4">
-              <Link href="/admissions" className="inline-flex h-14 items-center justify-center rounded-md bg-primary px-8 text-base font-semibold text-white transition-all hover:bg-primary/90 hover:shadow-lg hover:-translate-y-0.5">
-                Apply for Admission
-              </Link>
-              <Link href="/about" className="inline-flex h-14 items-center justify-center rounded-md bg-white/10 backdrop-blur-md px-8 text-base font-semibold text-white border border-white/20 transition-all hover:bg-white/20">
-                Discover Our Heritage
-              </Link>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
+                <img
+                  src={heroImg}
+                  alt="Arya School Pundri Gate"
+                  className="w-full h-[480px] object-cover object-center"
+                />
+                {/* Very subtle bottom label */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-5">
+                  <p className="font-hindi text-white text-lg font-semibold">आर्य स्कूल, पूंडरी</p>
+                  <p className="text-white/70 text-sm">Estd. 1916 · Pundri, Kaithal, Haryana</p>
+                </div>
+              </div>
             </motion.div>
-          </motion.div>
+
+          </div>
         </div>
       </section>
 
