@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'wouter';
 import { ArrowRight, BookOpen, Users, Compass, Award, Shield } from 'lucide-react';
 
-import heroImg from '@assets/generated_images/school_hero.jpg';
+import heroImg from '@assets/WhatsApp_Image_2026-07-24_at_10.57.40_AM_1784871104967.jpeg';
 import vedicFireImg from '@assets/generated_images/vedic_fire.jpg';
 
 export default function Home() {

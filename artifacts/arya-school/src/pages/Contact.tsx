@@ -114,13 +114,27 @@ export default function Contact() {
               </ul>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="bg-muted w-full h-64 rounded-2xl overflow-hidden relative border border-border flex items-center justify-center group">
-               <div className="absolute inset-0 bg-[url('https://maps.wikimedia.org/osm-intl/12/2921/1709.png')] opacity-50 bg-cover bg-center grayscale" />
-               <div className="relative z-10 flex flex-col items-center">
-                  <MapPin className="w-10 h-10 text-primary mb-2" />
-                  <span className="font-bold text-foreground bg-white/80 px-3 py-1 rounded-md backdrop-blur-sm">View on Google Maps</span>
-               </div>
+            {/* Google Map Embed */}
+            <div className="w-full rounded-2xl overflow-hidden border border-border shadow-sm">
+              <iframe
+                title="Arya School Pundri Location"
+                src="https://maps.google.com/maps?q=Anglo+Sanskrit+Senior+Secondary+School+Pundri+Kaithal+Haryana&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="280"
+                style={{ border: 0, display: 'block' }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <a
+                href="https://maps.google.com/maps?q=Anglo+Sanskrit+Senior+Secondary+School+Pundri+Kaithal+Haryana"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 py-3 bg-primary text-white text-sm font-semibold hover:bg-primary/90 transition-colors"
+              >
+                <MapPin className="w-4 h-4" />
+                View on Google Maps
+              </a>
             </div>
 
           </motion.div>
