@@ -35,7 +35,7 @@ export default function Home() {
             initial="hidden"
             animate="visible"
             variants={STAGGER}
-            className="max-w-3xl"
+            className="max-w-3xl translate-y-6 md:translate-y-10"
           >
               <motion.div variants={FADE_UP} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/25 border border-primary/40 text-primary text-sm font-semibold mb-6">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
