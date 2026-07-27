@@ -1,15 +1,18 @@
-# [Project name]
+# Arya School Pundri
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Public-facing school website for Arya School, Pundri, with information about the school's heritage, academics, admissions, facilities, gallery, and contact details.
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
+- `pnpm install` — install the workspace dependencies after importing or cloning
+- `pnpm --filter @workspace/arya-school run dev` — run the public website
+- `pnpm --filter @workspace/api-server run dev` — run the API server when a database is available
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
 - `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
 - `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
+- Website env: `PORT` and `BASE_PATH` are provided by the web artifact workflow
+- API env: `DATABASE_URL` — Postgres connection string
 
 ## Stack
 
@@ -22,23 +25,31 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/arya-school/src/pages/` — website pages
+- `artifacts/arya-school/src/components/layout/` — shared navbar, layout, and footer
+- `artifacts/arya-school/src/index.css` — color tokens, typography, and global styles
+- `artifacts/api-server/src/` — Express API service
+- `lib/db/src/schema/` — database schema source of truth
+- `lib/api-spec/openapi.yaml` — API contract source of truth
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- The public website is a standalone Vite artifact and does not require the API or database to render its pages.
+- The website keeps the imported pnpm workspace structure and uses Wouter for client-side page routing.
+- School imagery is loaded from the workspace's attached assets so the site remains self-contained.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+Visitors can learn about Arya School Pundri, explore its academic and campus offerings, review admission information, browse the gallery, and contact the school.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+The user prefers a normal, visible website presentation with a navbar, hero section, content sections, and footer rather than a code-like or canvas-only view.
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- The API workflow will not start until `DATABASE_URL` is provisioned.
+- After importing the workspace from a zip, run `pnpm install` before starting any artifact workflow.
 
 ## Pointers
 
