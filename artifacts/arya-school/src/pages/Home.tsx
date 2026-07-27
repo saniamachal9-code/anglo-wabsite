@@ -202,15 +202,6 @@ export default function Home() {
           <p className="text-lg md:text-xl text-white/80 mb-10 leading-relaxed">
             Join the Anglo Sanskrit Senior Secondary School family. Admissions are currently open for classes 1st through 12th for the upcoming academic session. Experience an environment where tradition and modernity walk hand in hand.
           </p>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/admissions" className="w-full sm:w-auto inline-flex h-14 items-center justify-center rounded-md bg-primary px-10 text-lg font-bold text-white transition-transform hover:scale-105 shadow-xl">
-              Start Admission Process
-            </Link>
-            <Link href="/contact" className="w-full sm:w-auto inline-flex h-14 items-center justify-center rounded-md bg-transparent border-2 border-white/30 px-10 text-lg font-bold text-white transition-colors hover:bg-white/10">
-              Contact Office
-            </Link>
-          </div>
         </div>
       </section>
     </div>
