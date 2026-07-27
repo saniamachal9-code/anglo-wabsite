@@ -4,7 +4,6 @@ import { ArrowRight, BookOpen, Users, Compass, Award, Shield } from 'lucide-reac
 
 import heroImg from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(6)_1785129810087.jpeg';
 import vedicFireImg from '@assets/generated_images/vedic_fire.jpg';
-import classroomImg from '@assets/generated_images/school_classroom.jpg';
 
 export default function Home() {
   const FADE_UP = {
@@ -32,10 +31,12 @@ export default function Home() {
         </div>
 
         <div className="container relative z-10 mx-auto px-4 md:px-6 py-20">
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
-
-            {/* Left — Text */}
-            <motion.div initial="hidden" animate="visible" variants={STAGGER}>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={STAGGER}
+            className="max-w-3xl"
+          >
               <motion.div variants={FADE_UP} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/25 border border-primary/40 text-primary text-sm font-semibold mb-6">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                 Admissions Open for Session 2024-25
@@ -53,15 +54,6 @@ export default function Home() {
                 Arya School, Pundri — affiliated with Arya Samaj — nurtures young minds through academic excellence and character building. Classes 1st to 12th, Hindi &amp; English Medium.
               </motion.p>
 
-              <motion.div variants={FADE_UP} className="flex flex-wrap gap-4">
-                <Link href="/admissions" className="inline-flex h-12 items-center justify-center rounded-lg bg-primary px-7 text-sm font-bold text-white transition-all hover:bg-primary/90 hover:shadow-xl hover:-translate-y-0.5">
-                  Apply for Admission
-                </Link>
-                <Link href="/about" className="inline-flex h-12 items-center justify-center rounded-lg border border-white/40 backdrop-blur-sm px-7 text-sm font-semibold text-white transition-all hover:bg-white/15">
-                  Discover Our Heritage
-                </Link>
-              </motion.div>
-
               <motion.div variants={FADE_UP} className="flex gap-8 mt-10 pt-8 border-t border-white/20">
                 {[
                   { value: '1916', label: 'Estd.' },
@@ -74,40 +66,7 @@ export default function Home() {
                   </div>
                 ))}
               </motion.div>
-            </motion.div>
-
-            {/* Right — Floating school scene card */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="hidden lg:flex flex-col gap-4 items-end"
-            >
-              {/* Main classroom image card */}
-              <div className="relative w-72 rounded-2xl overflow-hidden shadow-2xl border border-white/20 backdrop-blur-sm">
-                <img
-                  src={classroomImg}
-                  alt="School Classroom"
-                  className="w-full h-52 object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                  <p className="text-white font-semibold text-sm">Modern Classrooms</p>
-                  <p className="text-white/60 text-xs">Equipped for excellence</p>
-                </div>
-              </div>
-
-              {/* Info badge */}
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-5 py-4 w-64 shadow-lg">
-                <p className="font-hindi text-primary font-bold text-base mb-1">आर्य स्कूल, पूंडरी</p>
-                <p className="text-white/70 text-xs leading-relaxed">Pundri, Kaithal, Haryana 136042</p>
-                <div className="mt-3 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                  <span className="text-green-300 text-xs font-medium">Accepting Applications</span>
-                </div>
-              </div>
-            </motion.div>
-
-          </div>
+          </motion.div>
         </div>
       </section>
 
