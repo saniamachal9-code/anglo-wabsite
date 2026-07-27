@@ -34,7 +34,7 @@ export default function Academics() {
               Hindi & English Mediums Available
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              We understand that the medium of instruction plays a crucial role in a child's comprehension and comfort. Arya School proudly offers both Hindi Medium and English Medium tracks.
+              We understand that the medium of instruction plays a crucial role in a child's comprehension and comfort. Anglo Sanskrit Senior Secondary School proudly offers both Hindi Medium and English Medium tracks.
             </p>
             <ul className="space-y-4 pt-4">
               <li className="flex items-start gap-3">

@@ -16,10 +16,10 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-hindi text-xl font-bold text-white">
-                  आर्य स्कूल, पूंडरी
+                  एंग्लो संस्कृत सीनियर सेकेंडरी स्कूल, पूंडरी
                 </span>
                 <span className="font-serif text-xs font-semibold tracking-wide text-white/80">
-                  ARYA SCHOOL, PUNDRI
+                  ANGLO SANSKRIT SENIOR SECONDARY SCHOOL, PUNDRI
                 </span>
               </div>
             </Link>
@@ -50,7 +50,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                 <span className="text-sm text-secondary-foreground/80 leading-relaxed">
-                  Arya School, Pundri,<br />
+                  Anglo Sanskrit Senior Secondary School, Pundri,<br />
                   Kaithal, Haryana 136042
                 </span>
               </li>
@@ -88,7 +88,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-secondary-foreground/60">
-            © {currentYear} Arya School, Pundri. All rights reserved.
+            © {currentYear} Anglo Sanskrit Senior Secondary School, Pundri. All rights reserved.
           </p>
           <p className="text-sm text-secondary-foreground/60 flex items-center gap-1">
             Managed by Arya Samaj <span className="text-primary mx-1">॥</span> Om

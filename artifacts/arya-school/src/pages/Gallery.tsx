@@ -79,7 +79,7 @@ export default function Gallery() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-white/70 max-w-xl mx-auto"
           >
-            A glimpse into the vibrant life at Arya School, Pundri — moments of
+            A glimpse into the vibrant life at Anglo Sanskrit Senior Secondary School, Pundri — moments of
             learning, celebration, and growth.
           </motion.p>
         </div>

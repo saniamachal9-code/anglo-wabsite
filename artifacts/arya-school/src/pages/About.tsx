@@ -21,7 +21,7 @@ export default function About() {
           <h2 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6">Our Roots & Heritage</h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6 rounded-full" />
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Arya School, Pundri is more than just an educational institution; it is a movement dedicated to building character, imparting true knowledge, and fostering a sense of duty towards the nation and humanity.
+            Anglo Sanskrit Senior Secondary School, Pundri is more than just an educational institution; it is a movement dedicated to building character, imparting true knowledge, and fostering a sense of duty towards the nation and humanity.
           </p>
         </motion.div>
 
@@ -31,7 +31,7 @@ export default function About() {
             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
             className="rounded-3xl overflow-hidden shadow-xl aspect-video"
           >
-            <img src={heroImg} alt="Arya School Campus" className="w-full h-full object-cover" />
+            <img src={heroImg} alt="Anglo Sanskrit Senior Secondary School Campus" className="w-full h-full object-cover" />
           </motion.div>
           
           <motion.div 
@@ -43,7 +43,7 @@ export default function About() {
               Founded on the profound tenets of the Arya Samaj, our school draws its inspiration from Maharishi Dayanand Saraswati. He envisioned an education system that synthesizes the ancient Vedic wisdom with modern scientific advancements.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              At Arya School, Pundri, we carry this torch forward. We do not just teach subjects; we teach life. The ten principles of Arya Samaj serve as our guiding light, ensuring that every student who walks through our gates learns the value of truth, righteousness, and service.
+              At Anglo Sanskrit Senior Secondary School, Pundri, we carry this torch forward. We do not just teach subjects; we teach life. The ten principles of Arya Samaj serve as our guiding light, ensuring that every student who walks through our gates learns the value of truth, righteousness, and service.
             </p>
             <div className="bg-primary/5 p-6 rounded-xl border border-primary/20 mt-6">
               <h4 className="font-hindi text-2xl font-bold text-accent mb-2">अज्ञानान्धकारं निवार्य ज्ञानालोकं कुरु।</h4>

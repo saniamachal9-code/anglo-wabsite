@@ -1,6 +1,6 @@
-# Arya School Pundri
+# Anglo Sanskrit Senior Secondary School, Pundri
 
-Public-facing school website for Arya School, Pundri, with information about the school's heritage, academics, admissions, facilities, gallery, and contact details.
+Public-facing school website for Anglo Sanskrit Senior Secondary School, Pundri, with information about the school's heritage, academics, admissions, facilities, gallery, and contact details.
 
 ## Run & Operate
 
@@ -40,7 +40,7 @@ Public-facing school website for Arya School, Pundri, with information about the
 
 ## Product
 
-Visitors can learn about Arya School Pundri, explore its academic and campus offerings, review admission information, browse the gallery, and contact the school.
+Visitors can learn about Anglo Sanskrit Senior Secondary School, Pundri, explore its academic and campus offerings, review admission information, browse the gallery, and contact the school.
 
 ## User preferences
 

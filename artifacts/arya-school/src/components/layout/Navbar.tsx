@@ -43,10 +43,10 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col">
               <span className="font-hindi text-xl font-bold leading-tight text-secondary">
-                आर्य स्कूल, पूंडरी
+                एंग्लो संस्कृत सीनियर सेकेंडरी स्कूल, पूंडरी
               </span>
               <span className="font-serif text-sm font-semibold tracking-wide text-foreground/80">
-                ARYA SCHOOL, PUNDRI
+                ANGLO SANSKRIT SENIOR SECONDARY SCHOOL, PUNDRI
               </span>
             </div>
           </Link>
@@ -109,7 +109,7 @@ export default function Navbar() {
             >
               <div className="flex items-center justify-between mb-8">
                 <span className="font-hindi text-xl font-bold text-secondary">
-                  आर्य स्कूल
+                  एंग्लो संस्कृत सीनियर सेकेंडरी स्कूल, पूंडरी
                 </span>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}

@@ -23,7 +23,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <img
             src={heroImg}
-            alt="Arya School Pundri"
+            alt="Anglo Sanskrit Senior Secondary School, Pundri"
             className="w-full h-full object-cover object-center"
           />
           {/* Light left-side gradient only — photo stays visible on right */}
@@ -51,7 +51,7 @@ export default function Home() {
               </motion.h1>
 
               <motion.p variants={FADE_UP} className="text-base md:text-lg text-white/80 mb-8 leading-relaxed max-w-xl">
-                Arya School, Pundri — affiliated with Arya Samaj — nurtures young minds through academic excellence and character building. Classes 1st to 12th, Hindi &amp; English Medium.
+                Anglo Sanskrit Senior Secondary School, Pundri — affiliated with Arya Samaj — nurtures young minds through academic excellence and character building. Classes 1st to 12th, Hindi &amp; English Medium.
               </motion.p>
 
               <motion.div variants={FADE_UP} className="flex gap-8 mt-10 pt-8 border-t border-white/20">
@@ -162,7 +162,7 @@ export default function Home() {
                 Decades of Trust in <span className="text-accent italic">Pundri</span>
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Founded on the visionary ideals of Swami Dayanand Saraswati, Arya School has been a beacon of light in Pundri for decades. We believe that true education brings liberation — liberating the mind from ignorance while grounding the soul in cultural heritage.
+                Founded on the visionary ideals of Swami Dayanand Saraswati, Anglo Sanskrit Senior Secondary School has been a beacon of light in Pundri for decades. We believe that true education brings liberation — liberating the mind from ignorance while grounding the soul in cultural heritage.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Our institution stands unique in offering both Hindi and English mediums of instruction, ensuring that every child in the community has access to quality education without losing touch with their linguistic roots.
@@ -200,7 +200,7 @@ export default function Home() {
           <Award className="w-16 h-16 text-primary mx-auto mb-8" />
           <h2 className="font-serif text-3xl md:text-5xl font-bold mb-6">Shape Your Child's Future With Us</h2>
           <p className="text-lg md:text-xl text-white/80 mb-10 leading-relaxed">
-            Join the Arya School family. Admissions are currently open for classes 1st through 12th for the upcoming academic session. Experience an environment where tradition and modernity walk hand in hand.
+            Join the Anglo Sanskrit Senior Secondary School family. Admissions are currently open for classes 1st through 12th for the upcoming academic session. Experience an environment where tradition and modernity walk hand in hand.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

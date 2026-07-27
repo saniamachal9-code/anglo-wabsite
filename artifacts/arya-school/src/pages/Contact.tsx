@@ -78,7 +78,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-foreground mb-1">Campus Address</h4>
-                    <p className="text-muted-foreground">Arya School, Pundri,<br />Kaithal, Haryana 136042</p>
+                    <p className="text-muted-foreground">Anglo Sanskrit Senior Secondary School, Pundri,<br />Kaithal, Haryana 136042</p>
                   </div>
                 </li>
                 
@@ -117,7 +117,7 @@ export default function Contact() {
             {/* Google Map Embed */}
             <div className="w-full rounded-2xl overflow-hidden border border-border shadow-sm">
               <iframe
-                title="Arya School Pundri Location"
+                title="Anglo Sanskrit Senior Secondary School, Pundri Location"
                 src="https://maps.google.com/maps?q=Anglo+Sanskrit+Senior+Secondary+School+Pundri+Kaithal+Haryana&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="280"

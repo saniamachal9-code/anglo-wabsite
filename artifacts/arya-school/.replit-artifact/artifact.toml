@@ -1,6 +1,6 @@
 kind = "web"
 previewPath = "/"
-title = "Arya School Pundri"
+title = "Anglo Sanskrit Senior Secondary School, Pundri"
 version = "1.0.0"
 id = "artifacts/arya-school"
 router = "path"
