@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
 import event14 from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(14)_1785388618202.jpeg';
-import event15 from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(15)_1785388621448.jpeg';
 
 const GALLERY_ITEMS = [
   {
@@ -33,10 +32,6 @@ const GALLERY_ITEMS = [
     category: 'Events',
     images: [
       { src: event14, alt: '150 Glorious Years Celebration' },
-      { src: event15, alt: 'Cultural Dance Performance' },
-      { src: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80', alt: 'Annual Function' },
-      { src: 'https://images.unsplash.com/photo-1529390079861-591de354faf5?w=800&q=80', alt: 'Cultural Program' },
-      { src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80', alt: 'Prize Distribution' },
     ],
   },
 ];
