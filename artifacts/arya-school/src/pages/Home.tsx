@@ -35,7 +35,7 @@ export default function Home() {
             initial="hidden"
             animate="visible"
             variants={STAGGER}
-            className="max-w-3xl translate-y-6 md:translate-y-10"
+            className="max-w-3xl translate-y-16 md:translate-y-24 border-l-4 border-primary/60 pl-6"
           >
               <motion.div variants={FADE_UP} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/25 border border-primary/40 text-primary text-sm font-semibold mb-6">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
@@ -75,7 +75,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-3">Our Core Philosophy</h2>
-            <h3 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-6">Built on the Principles of Arya Samaj</h3>
+            <h3 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-6">Anglo Sanskrit Senior Secondary School, Pundri</h3>
             <p className="text-muted-foreground text-lg">
               We believe education is not just about academic success, but about creating noble human beings grounded in truth and moral conduct.
             </p>
