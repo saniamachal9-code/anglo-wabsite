@@ -1,37 +1,42 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
+import gate1 from '@assets/WhatsApp_Image_2026-07-24_at_10.57.40_AM_1784871104967.jpeg';
+import gate2 from '@assets/WhatsApp_Image_2026-07-24_at_10.57.44_AM_1784871086627.jpeg';
+import gate3 from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(6)_1785129810087.jpeg';
+import gate4 from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(11)_1785388331336.jpeg';
+import labImg from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(12)_1785388499013.jpeg';
+import sportsImg from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(13)_1785388533869.jpeg';
 import event14 from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(14)_1785388618202.jpeg';
+import event15 from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(15)_1785388621448.jpeg';
 
 const GALLERY_ITEMS = [
   {
     category: 'Campus',
     images: [
-      { src: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80', alt: 'School Building' },
-      { src: 'https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80', alt: 'School Grounds' },
-      { src: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80', alt: 'Library' },
-    ],
-  },
-  {
-    category: 'Classrooms',
-    images: [
-      { src: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80', alt: 'Classroom' },
-      { src: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80', alt: 'Science Lab' },
-      { src: 'https://images.unsplash.com/photo-1544717305-2782549b5136?w=800&q=80', alt: 'Computer Lab' },
+      { src: gate1, alt: 'School Gate — Front View' },
+      { src: gate2, alt: 'School Gate — Street View' },
+      { src: gate3, alt: 'School Entrance' },
+      { src: gate4, alt: 'School Arch — ESTD 1916' },
     ],
   },
   {
     category: 'Sports',
     images: [
-      { src: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&q=80', alt: 'Sports Day' },
-      { src: 'https://images.unsplash.com/photo-1471295253337-3ceaaedca402?w=800&q=80', alt: 'Annual Meet' },
-      { src: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&q=80', alt: 'Cricket Ground' },
+      { src: sportsImg, alt: 'Sports Ground' },
+    ],
+  },
+  {
+    category: 'Classrooms',
+    images: [
+      { src: labImg, alt: 'Science Lab' },
     ],
   },
   {
     category: 'Events',
     images: [
       { src: event14, alt: '150 Glorious Years Celebration' },
+      { src: event15, alt: 'Cultural Dance Performance' },
     ],
   },
 ];
