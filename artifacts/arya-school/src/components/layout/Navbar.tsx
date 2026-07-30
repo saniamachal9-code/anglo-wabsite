@@ -7,8 +7,8 @@ const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About Us' },
   { href: '/academics', label: 'Academics' },
-  { href: '/admissions', label: 'Admissions' },
   { href: '/facilities', label: 'Facilities' },
+  { href: '/admissions', label: 'Admissions' },
   { href: '/gallery', label: 'Gallery' },
   { href: '/contact', label: 'Contact' },
 ];
