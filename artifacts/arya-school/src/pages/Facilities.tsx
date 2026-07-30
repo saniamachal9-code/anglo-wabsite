@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { BookOpen, Monitor, FlaskConical, Trophy, Bus, Stethoscope } from 'lucide-react';
-import libraryImg from '@assets/generated_images/students_library.jpg';
-import sportsImg from '@assets/generated_images/sports_ground.jpg';
+import libraryImg from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(12)_1785388499013.jpeg';
+import sportsImg from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(13)_1785388533869.jpeg';
 
 export default function Facilities() {
   const FADE_UP = {
@@ -11,7 +11,7 @@ export default function Facilities() {
 
   const facilitiesList = [
     {
-      title: "Vedic Library",
+      title: "Library",
       desc: "A rich repository of knowledge spanning modern academics, literature, and rare Vedic texts. A silent sanctuary for focused learning.",
       icon: BookOpen,
       image: libraryImg,
