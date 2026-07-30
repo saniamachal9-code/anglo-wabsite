@@ -2,9 +2,6 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
 import gate1 from '@assets/WhatsApp_Image_2026-07-24_at_10.57.40_AM_1784871104967.jpeg';
-import gate2 from '@assets/WhatsApp_Image_2026-07-24_at_10.57.44_AM_1784871086627.jpeg';
-import gate3 from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(6)_1785129810087.jpeg';
-import gate4 from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(11)_1785388331336.jpeg';
 import labImg from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(12)_1785388499013.jpeg';
 import sportsImg from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(13)_1785388533869.jpeg';
 import event14 from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(14)_1785388618202.jpeg';
@@ -14,10 +11,7 @@ const GALLERY_ITEMS = [
   {
     category: 'Campus',
     images: [
-      { src: gate1, alt: 'School Gate — Front View' },
-      { src: gate2, alt: 'School Gate — Street View' },
-      { src: gate3, alt: 'School Entrance' },
-      { src: gate4, alt: 'School Arch — ESTD 1916' },
+      { src: gate1, alt: 'School Gate' },
     ],
   },
   {
