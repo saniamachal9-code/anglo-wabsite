@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Target, Eye, Heart, BookOpen, User } from 'lucide-react';
-import heroImg from '@assets/generated_images/school_hero.jpg';
+import heroImg from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(11)_1785388331336.jpeg';
 
 export default function About() {
   const FADE_UP = {
