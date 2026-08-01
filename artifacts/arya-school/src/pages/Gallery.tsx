@@ -2,12 +2,19 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
 
+import principalImg from '@assets/WhatsApp_Image_2026-08-01_at_11.11.34_AM_1785562984254.jpeg';
 import labImg from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(12)_1785388499013.jpeg';
 import sportsImg from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(13)_1785388533869.jpeg';
 import event14 from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(14)_1785388618202.jpeg';
 import event15 from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(15)_1785388621448.jpeg';
 
 const GALLERY_ITEMS = [
+  {
+    category: 'Administration',
+    images: [
+      { src: principalImg, alt: 'Principal' },
+    ],
+  },
   {
     category: 'Sports',
     images: [
