@@ -7,6 +7,7 @@ import labImg from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(12)_1785388
 import sportsImg from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(13)_1785388533869.jpeg';
 import event14 from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(14)_1785388618202.jpeg';
 import event15 from '@assets/WhatsApp_Image_2026-07-24_at_2.13.46_PM_(15)_1785388621448.jpeg';
+import event16 from '@assets/WhatsApp_Image_2026-08-01_at_11.11.41_AM_1785563103203.jpeg';
 
 const GALLERY_ITEMS = [
   {
@@ -32,6 +33,7 @@ const GALLERY_ITEMS = [
     images: [
       { src: event14, alt: '150 Glorious Years Celebration' },
       { src: event15, alt: 'Cultural Dance Performance' },
+      { src: event16, alt: 'School Celebration' },
     ],
   },
 ];
