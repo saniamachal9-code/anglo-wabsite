@@ -1,4 +1,9 @@
-import "dotenv/config";
+import path from "node:path";
+import { config } from "dotenv";
+
+// Load .env from the workspace root (two levels up from artifacts/api-server)
+config({ path: path.resolve(import.meta.dirname, "../../.env") });
+
 import app from "./app";
 import { logger } from "./lib/logger";
 
