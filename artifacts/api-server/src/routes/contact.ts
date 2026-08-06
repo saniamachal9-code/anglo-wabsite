@@ -30,8 +30,8 @@ router.post("/contact", async (req, res) => {
   const resend = new Resend(apiKey);
 
   const { error } = await resend.emails.send({
-    from: "Anglo School Contact Form <noreply@aryaschoolpundri.com>",
-    to: ["info@aryaschoolpundri.com"],
+    from: "Anglo School Contact Form <onboarding@resend.dev>",
+    to: ["saniamachal9@gmail.com"],
     replyTo: email || undefined,
     subject: `[Contact Form] ${subject}`,
     html: `
