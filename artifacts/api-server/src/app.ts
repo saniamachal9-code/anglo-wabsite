@@ -6,6 +6,35 @@ import { logger } from "./lib/logger";
 
 const app: Express = express();
 
+// CORS - allow Vercel frontend explicitly + any dev origin
+const allowedOrigins = [
+  "https://anglo-school.vercel.app",
+  "https://anglo-wabsite.onrender.com",
+  "http://localhost:3000",
+  "http://localhost:5173",
+  "https://*.vercel.app",
+];
+
+app.use(
+  cors({
+    origin(origin, callback) {
+      if (!origin) return callback(null, true);
+      const allowed =
+        allowedOrigins.some((o) => {
+          if (o.includes("*")) {
+            const pattern = o.replace(/\./g, "\\.").replace(/\*/g, ".*");
+            return new RegExp(`^${pattern}$`).test(origin);
+          }
+          return o === origin;
+        });
+      callback(null, allowed);
+    },
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  }),
+);
+
 app.use(
   pinoHttp({
     logger,
@@ -25,7 +54,6 @@ app.use(
     },
   }),
 );
-app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
