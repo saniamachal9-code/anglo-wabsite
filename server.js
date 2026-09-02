@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const http = require('http');
+const { spawn, spawnSync } = require('child_process');
 
 const app = express();
 
@@ -65,3 +66,33 @@ app.listen(PORT, () => {
   console.log(`Anglo School website on http://localhost:${PORT}`);
   console.log(`API backend forwarded to http://localhost:${API_PORT}`);
 });
+
+// Start the API backend as a child process so the proxy works in a single Render service.
+const apiDist = path.join(__dirname, 'artifacts', 'api-server', 'dist', 'index.mjs');
+const apiServerDir = path.join(__dirname, 'artifacts', 'api-server');
+
+if (!fs.existsSync(apiDist)) {
+  // Build the API backend on the fly if it was not built during deploy.
+  console.log('API backend build not found. Building it now...');
+  const build = spawnSync('node', ['build.mjs'], { cwd: apiServerDir, stdio: 'inherit' });
+  if (build.status !== 0) {
+    console.error('Failed to build API backend. /api routes will return 502.');
+  }
+}
+
+if (fs.existsSync(apiDist)) {
+  console.log('Starting API backend on port', API_PORT, '...');
+  const api = spawn('node', [apiDist], {
+    env: {
+      ...process.env,
+      PORT: String(API_PORT),
+      NODE_ENV: process.env.NODE_ENV || 'production',
+    },
+    stdio: 'inherit',
+  });
+  api.on('exit', (code) => {
+    console.log(`API backend exited with code ${code ?? 0}`);
+  });
+} else {
+  console.log('API backend build not found at', apiDist, '- /api routes will return 502.');
+}
