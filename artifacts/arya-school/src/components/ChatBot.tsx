@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mic, MicOff, Send, X, Volume2, VolumeX, Bot, Loader2 } from 'lucide-react';
+import { Mic, MicOff, Send, X, Volume2, VolumeX, Loader2 } from 'lucide-react';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -135,7 +135,7 @@ export default function ChatBot() {
             </motion.span>
           ) : (
             <motion.span key="bot" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} className="flex flex-col items-center">
-              <Bot className="w-7 h-7 text-white" />
+              <img src="/chatbot-logo.jpg" alt="Assistant" className="w-12 h-12 rounded-full object-cover ring-2 ring-white/50" />
             </motion.span>
           )}
         </AnimatePresence>
@@ -157,9 +157,7 @@ export default function ChatBot() {
           >
             {/* Header */}
             <div className="bg-secondary px-4 py-3 flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                <Bot className="w-5 h-5 text-primary" />
-              </div>
+              <img src="/chatbot-logo.jpg" alt="Assistant" className="w-9 h-9 rounded-full object-cover ring-2 ring-white/60 shrink-0" />
               <div className="flex-1 min-w-0">
                 <p className="text-white font-bold text-sm leading-tight truncate">Anglo School AI Assistant</p>
                 <p className="text-white/60 text-xs">Ask anything about our school</p>
@@ -179,9 +177,7 @@ export default function ChatBot() {
                   className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   {msg.role === 'assistant' && (
-                    <div className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center shrink-0 mr-2 mt-1">
-                      <Bot className="w-3.5 h-3.5 text-white" />
-                    </div>
+                    <img src="/chatbot-logo.jpg" alt="Assistant" className="w-6 h-6 rounded-full object-cover shrink-0 mr-2 mt-1" />
                   )}
                   <div className={`max-w-[80%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed whitespace-pre-wrap ${
                     msg.role === 'user'
@@ -195,9 +191,7 @@ export default function ChatBot() {
 
               {loading && (
                 <div className="flex justify-start">
-                  <div className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center shrink-0 mr-2 mt-1">
-                    <Bot className="w-3.5 h-3.5 text-white" />
-                  </div>
+                  <img src="/chatbot-logo.jpg" alt="Assistant" className="w-6 h-6 rounded-full object-cover shrink-0 mr-2 mt-1" />
                   <div className="bg-white border border-border rounded-2xl rounded-bl-sm px-4 py-3 flex items-center gap-1.5">
                     <span className="w-2 h-2 bg-secondary/50 rounded-full animate-bounce [animation-delay:0ms]" />
                     <span className="w-2 h-2 bg-secondary/50 rounded-full animate-bounce [animation-delay:150ms]" />

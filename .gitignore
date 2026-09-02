@@ -50,3 +50,7 @@ Thumbs.db
 
 # Imported source archive
 zipFile.zip
+
+dev.log
+dev_out.log
+dev_err.log
