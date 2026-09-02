@@ -1,0 +1,6 @@
+node_modules
+artifacts/arya-school/node_modules
+artifacts/arya-school/dist
+.vercel
+.git
+*.md

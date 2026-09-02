@@ -20,6 +20,11 @@ const API_TARGET = `http://127.0.0.1:${API_PORT}`;
 
 app.use(express.static(DIST_DIR));
 
+// Lightweight health check for cron jobs (keeps Render free tier alive)
+app.get('/health', (_req, res) => {
+  res.status(200).send('ok');
+});
+
 // Proxy API requests to the backend server so the frontend and API share one origin.
 app.use('/api', (req, res) => {
   const proxyReq = http.request(

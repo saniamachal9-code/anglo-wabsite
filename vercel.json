@@ -1,0 +1,10 @@
+{
+  "buildCommand": "cd artifacts/arya-school && pnpm install && pnpm run build",
+  "outputDirectory": "artifacts/arya-school/dist/public",
+  "installCommand": "pnpm install",
+  "project": "anglo-school",
+  "framework": null,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
