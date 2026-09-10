@@ -55,3 +55,6 @@ dev.log
 dev_out.log
 dev_err.log
 .vercel
+
+# environment
+.env
