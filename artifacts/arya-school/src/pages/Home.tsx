@@ -44,7 +44,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <img
             src={heroImg}
-            alt="Anglo Sanskrit Senior Secondary School, Pundri"
+            alt="Anglo Sanskrit Senior Secondary School Campus - CBSE HBSE Senior Secondary School in Pundri, Kaithal, Haryana"
             className="w-full h-full object-cover object-center"
           />
           {/* Light left-side gradient only — photo stays visible on right */}
@@ -163,7 +163,7 @@ export default function Home() {
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src={vedicFireImg}
-                  alt="Vedic Havan Fire"
+                  alt="Traditional Vedic Havan Ceremony at Anglo Sanskrit Senior Secondary School Promoting Indian Cultural Values"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent" />

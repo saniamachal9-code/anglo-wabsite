@@ -58,7 +58,7 @@ export default function About() {
             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
             className="rounded-3xl overflow-hidden shadow-xl aspect-video"
           >
-            <img src={heroImg} alt="Anglo Sanskrit Senior Secondary School Campus" className="w-full h-full object-cover" />
+            <img src={heroImg}             alt="Anglo Sanskrit Senior Secondary School Campus Building - Historic CBSE HBSE School in Pundri, Kaithal" className="w-full h-full object-cover" />
           </motion.div>
 
           <motion.div

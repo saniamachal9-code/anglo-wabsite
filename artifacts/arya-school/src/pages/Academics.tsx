@@ -84,7 +84,7 @@ export default function Academics() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="rounded-3xl overflow-hidden shadow-xl">
-            <img src={studentsImg} alt="Students studying" className="w-full h-auto object-cover" />
+            <img src={studentsImg}             alt="Anglo School Students Studying in Classroom - CBSE HBSE Academic Excellence in Kaithal, Haryana" className="w-full h-auto object-cover" />
           </motion.div>
         </section>
 

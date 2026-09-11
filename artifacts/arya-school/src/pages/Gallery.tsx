@@ -18,22 +18,22 @@ const GALLERY_GROUPS: { title: string; images: GalleryImage[] }[] = [
   {
     title: 'Campus Photos',
     images: [
-      { src: principalImg, alt: 'Principal' },
-      { src: labImg, alt: 'Science Lab' },
+      { src: principalImg, alt: 'Anglo Sanskrit Senior Secondary School Principal - School Leadership in Pundri, Kaithal' },
+      { src: labImg, alt: 'Anglo School Science Laboratory - Modern STEM Education Facility in Kaithal, Haryana' },
     ],
   },
   {
     title: 'Events',
     images: [
-      { src: event14, alt: '150 Glorious Years Celebration' },
-      { src: event15, alt: 'Cultural Dance Performance' },
-      { src: event16, alt: 'School Celebration' },
+      { src: event14, alt: '150 Glorious Years Celebration at Anglo Sanskrit Senior Secondary School, Pundri' },
+      { src: event15, alt: 'Students Performing Cultural Dance at Anglo School Independence Day Celebration' },
+      { src: event16, alt: 'Anglo School Annual Day Celebration with Students and Faculty in Pundri, Kaithal' },
     ],
   },
   {
     title: 'Student Activities',
     images: [
-      { src: sportsImg, alt: 'Sports Ground' },
+      { src: sportsImg, alt: 'Anglo School Sports Ground - Cricket and Athletics Facilities in Pundri, Haryana' },
     ],
   },
 ];

@@ -11,18 +11,21 @@ const ANNUAL_EVENTS = [
     date: '2026-27 Session',
     title: '150 Glorious Years Celebration',
     desc: 'A grand community celebration honouring the school\'s rich legacy with cultural performances, alumni reunions, and a lamp-lighting ceremony.',
+    alt: 'Anglo Sanskrit Senior Secondary School 150 Glorious Years Celebration - Cultural Performances and Alumni Reunion in Pundri',
   },
   {
     image: event15,
     date: '15 Aug 2026',
     title: 'Independence Day Celebrations',
     desc: 'Flag hoisting followed by patriotic songs, dance performances, and a march past by the student contingent on the school grounds.',
+    alt: 'Students Performing Flag Hoisting and March Past at Anglo School Independence Day Celebration in Kaithal, Haryana',
   },
   {
     image: event16,
     date: 'Dec 2026',
     title: 'Annual Day & Prize Distribution',
     desc: 'Students showcase theatre, music, and dance, while academic and sports achievers are felicitated on stage in front of parents.',
+    alt: 'Anglo School Annual Day Prize Distribution Ceremony - Students Performing Theatre and Dance in Pundri, Kaithal',
   },
 ];
 
@@ -99,7 +102,7 @@ export default function Events() {
                 className="group overflow-hidden rounded-3xl bg-card border border-border shadow-sm hover:shadow-xl transition-shadow"
               >
                 <div className="aspect-video overflow-hidden relative">
-                  <img src={event.image} alt={event.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src={event.image} alt={event.alt} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 rounded-full bg-black/50 backdrop-blur-sm px-3 py-1 text-xs font-semibold text-white">
                     <CalendarDays className="w-3.5 h-3.5 text-primary" />
                     {event.date}

@@ -46,7 +46,7 @@ export default function Staff() {
         >
           <div className="grid lg:grid-cols-2 gap-10 items-center bg-card border border-card-border rounded-3xl p-8 md:p-12 shadow-sm">
             <div className="rounded-2xl overflow-hidden shadow-lg aspect-[4/3]">
-              <img src={principalImg} alt="Principal of Anglo Sanskrit Senior Secondary School" className="w-full h-full object-cover" />
+              <img src={principalImg} alt="Principal of Anglo Sanskrit Senior Secondary School, Pundri - School Leadership in Kaithal, Haryana" className="w-full h-full object-cover" />
             </div>
             <div className="space-y-5">
               <h2 id="principal-heading" className="font-serif text-3xl md:text-4xl font-bold text-foreground">Principal</h2>

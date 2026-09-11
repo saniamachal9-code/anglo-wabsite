@@ -15,12 +15,14 @@ export default function Facilities() {
       desc: "A rich repository of knowledge spanning modern academics, literature, and rare Vedic texts. A silent sanctuary for focused learning.",
       icon: BookOpen,
       image: libraryImg,
+      alt: "Anglo School Library - Vedic and Modern Academic Resources for Students in Pundri, Kaithal",
     },
     {
       title: "Sports Ground",
       desc: "Expansive green fields dedicated to physical development. We offer facilities for cricket, volleyball, athletics, and traditional sports.",
       icon: Trophy,
       image: sportsImg,
+      alt: "Anglo School Sports Ground - Cricket, Volleyball and Athletics Facilities in Pundri, Haryana",
     },
   ];
 
@@ -92,7 +94,7 @@ export default function Facilities() {
               className="group rounded-3xl overflow-hidden bg-card border border-border shadow-sm hover:shadow-xl transition-all duration-300"
             >
               <div className="aspect-video overflow-hidden relative">
-                <img src={fac.image} alt={fac.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src={fac.image} alt={fac.alt} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent" />
                 <h2
                   id={`facility-${fac.title.toLowerCase().replace(/\s+/g, '-')}`}
