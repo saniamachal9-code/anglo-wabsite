@@ -4,7 +4,23 @@
   "installCommand": "pnpm install",
   "project": "anglo-school",
   "framework": null,
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/default.html", "destination": "/", "permanent": true },
+    { "source": "/about.html", "destination": "/about", "permanent": true },
+    { "source": "/academics.html", "destination": "/academics", "permanent": true },
+    { "source": "/admissions.html", "destination": "/admissions", "permanent": true },
+    { "source": "/staff.html", "destination": "/staff", "permanent": true },
+    { "source": "/contact.html", "destination": "/contact", "permanent": true },
+    { "source": "/contact.php", "destination": "/contact", "permanent": true },
+    { "source": "/gallery.html", "destination": "/gallery", "permanent": true },
+    { "source": "/events.html", "destination": "/events", "permanent": true },
+    { "source": "/facilities.html", "destination": "/facilities", "permanent": true },
+    { "source": "/:path(.*)/", "destination": "/:path", "permanent": true }
   ]
 }

@@ -1,7 +1,19 @@
+import { useEffect } from "react";
 import { Link } from "wouter";
 import { AlertCircle } from "lucide-react";
 
 export default function NotFound() {
+  useEffect(() => {
+    const head = document.head;
+    const meta = document.createElement("meta");
+    meta.setAttribute("name", "robots");
+    meta.setAttribute("content", "noindex, nofollow");
+    head.appendChild(meta);
+    return () => {
+      head.removeChild(meta);
+    };
+  }, []);
+
   return (
     <div className="flex min-h-[70vh] w-full items-center justify-center bg-background p-4">
       <div className="text-center max-w-md">

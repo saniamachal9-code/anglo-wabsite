@@ -1,2 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+
+Sitemap: https://anglo-school.vercel.app/sitemap.xml

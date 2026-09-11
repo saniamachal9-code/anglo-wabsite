@@ -50,6 +50,18 @@ const DEFAULT_PAGE_META: PageMeta = {
   description: 'Anglo School - Premier educational institution in Kaithal, Haryana.',
 };
 
+const SITE_URL = 'https://anglo-school.vercel.app';
+
+function setMetaAttribute(selector: string, tagName: string, attributes: Record<string, string>): HTMLMetaElement {
+  let el = document.head.querySelector<HTMLMetaElement>(selector);
+  if (!el) {
+    el = document.createElement(tagName);
+    document.head.appendChild(el);
+  }
+  Object.entries(attributes).forEach(([key, value]) => el!.setAttribute(key, value));
+  return el;
+}
+
 export const usePageMeta = (): void => {
   const [location] = useLocation();
   const path = location.split('?')[0].split('#')[0];
@@ -58,13 +70,12 @@ export const usePageMeta = (): void => {
     const pageMeta: PageMeta = pageMetaMap[path] ?? DEFAULT_PAGE_META;
 
     document.title = pageMeta.title;
+    setMetaAttribute('meta[name="description"]', 'meta', { name: 'description', content: pageMeta.description });
 
-    let metaDescription = document.head.querySelector<HTMLMetaElement>('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', pageMeta.description);
+    const canonicalUrl = `${SITE_URL}${path === '/' ? '' : path}`;
+    setMetaAttribute('link[rel="canonical"]', 'link', { rel: 'canonical', href: canonicalUrl });
+    setMetaAttribute('meta[property="og:url"]', 'meta', { property: 'og:url', content: canonicalUrl });
+    setMetaAttribute('meta[property="og:title"]', 'meta', { property: 'og:title', content: pageMeta.title });
+    setMetaAttribute('meta[property="og:description"]', 'meta', { property: 'og:description', content: pageMeta.description });
   }, [path]);
 };
