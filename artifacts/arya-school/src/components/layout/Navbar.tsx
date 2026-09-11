@@ -7,9 +7,11 @@ const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About Us' },
   { href: '/academics', label: 'Academics' },
-  { href: '/facilities', label: 'Facilities' },
   { href: '/admissions', label: 'Admissions' },
+  { href: '/staff', label: 'Our Staff' },
+  { href: '/facilities', label: 'Facilities' },
   { href: '/gallery', label: 'Gallery' },
+  { href: '/events', label: 'Events' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -52,7 +54,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav aria-label="Main navigation" className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
@@ -82,7 +84,8 @@ export default function Navbar() {
           <button
             className="md:hidden p-2 text-foreground"
             onClick={() => setIsMobileMenuOpen(true)}
-            aria-label="Open menu"
+            aria-label="Open main menu"
+            aria-expanded="false"
           >
             <Menu className="h-6 w-6" />
           </button>
@@ -105,6 +108,9 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              role="dialog"
+              aria-modal="true"
+              aria-label="Mobile menu"
               className="fixed right-0 top-0 z-50 flex h-full w-4/5 max-w-sm flex-col bg-background p-6 shadow-2xl md:hidden"
             >
               <div className="flex items-center justify-between mb-8">
@@ -114,12 +120,13 @@ export default function Navbar() {
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="p-2 text-foreground/70 hover:text-foreground rounded-full hover:bg-accent/10"
+                  aria-label="Close main menu"
                 >
                   <X className="h-6 w-6" />
                 </button>
               </div>
 
-              <nav className="flex flex-col gap-4">
+              <nav aria-label="Mobile navigation" className="flex flex-col gap-4">
                 {NAV_LINKS.map((link) => (
                   <Link
                     key={link.href}

@@ -67,11 +67,11 @@ export default function Contact() {
   return (
     <div className="flex flex-col w-full bg-background pt-24 pb-20">
       <div className="container mx-auto px-4 md:px-6">
-        
+
         {/* Page Header */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center max-w-3xl mx-auto mb-16">
-          <h1 className="text-sm font-bold tracking-widest text-primary uppercase mb-3">Contact Us</h1>
-          <h2 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6">Get In Touch</h2>
+          <p className="text-sm font-bold tracking-widest text-primary uppercase mb-3" aria-hidden="true">Contact Us</p>
+          <h1 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6">Contact Anglo School</h1>
           <div className="w-24 h-1 bg-primary mx-auto mb-6 rounded-full" />
           <p className="text-lg text-muted-foreground leading-relaxed">
             We are always here to answer your questions, listen to your feedback, and guide you through our admission process.
@@ -79,30 +79,44 @@ export default function Contact() {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          
-          {/* Contact Details */}
-          <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }} className="space-y-8">
-            
-            <div className="bg-card border border-border p-8 rounded-2xl shadow-sm">
-              <h3 className="font-serif text-2xl font-bold text-secondary mb-6">Contact Information</h3>
-              
+
+          {/* Left Column — Address & Contact Details */}
+          <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }} className="space-y-8 lg:order-1">
+
+            <section aria-labelledby="address-heading" className="bg-card border border-border p-8 rounded-2xl shadow-sm">
+              <h2 id="address-heading" className="font-serif text-2xl font-bold text-secondary mb-6">Office Address</h2>
               <ul className="space-y-6">
                 <li className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-foreground mb-1">Campus Address</h4>
+                    <p className="font-bold text-foreground mb-1">Campus Address</p>
                     <p className="text-muted-foreground">Anglo Sanskrit Senior Secondary School, Pundri,<br />Kaithal, Haryana 136042</p>
                   </div>
                 </li>
-                
+
+                <li className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center shrink-0">
+                    <Clock className="w-6 h-6 text-foreground/60" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-foreground mb-1">Office Hours</p>
+                    <p className="text-muted-foreground">Monday to Saturday<br />08:00 AM - 02:00 PM</p>
+                  </div>
+                </li>
+              </ul>
+            </section>
+
+            <section aria-labelledby="phone-email-heading" className="bg-card border border-border p-8 rounded-2xl shadow-sm">
+              <h2 id="phone-email-heading" className="font-serif text-2xl font-bold text-secondary mb-6">Phone &amp; Email</h2>
+              <ul className="space-y-6">
                 <li className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center shrink-0">
                     <Phone className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-foreground mb-1">Phone</h4>
+                    <p className="font-bold text-foreground mb-1">Phone</p>
                     <p className="text-muted-foreground">+91 98765 43210<br />+91 12345 67890</p>
                   </div>
                 </li>
@@ -112,57 +126,24 @@ export default function Contact() {
                     <Mail className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-foreground mb-1">Email</h4>
+                    <p className="font-bold text-foreground mb-1">Email</p>
                     <p className="text-muted-foreground">info@aryaschoolpundri.com<br />admissions@aryaschoolpundri.com</p>
                   </div>
                 </li>
-
-                <li className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center shrink-0">
-                    <Clock className="w-6 h-6 text-foreground/60" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-foreground mb-1">Working Hours</h4>
-                    <p className="text-muted-foreground">Monday to Saturday<br />08:00 AM - 02:00 PM</p>
-                  </div>
-                </li>
               </ul>
-            </div>
-
-            {/* Google Map Embed */}
-            <div className="w-full rounded-2xl overflow-hidden border border-border shadow-sm">
-              <iframe
-                title="Anglo Sanskrit Senior Secondary School, Pundri Location"
-                src="https://maps.google.com/maps?q=Anglo+Sanskrit+Senior+Secondary+School+Pundri+Kaithal+Haryana&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="280"
-                style={{ border: 0, display: 'block' }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-              <a
-                href="https://maps.google.com/maps?q=Anglo+Sanskrit+Senior+Secondary+School+Pundri+Kaithal+Haryana"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 py-3 bg-primary text-white text-sm font-semibold hover:bg-primary/90 transition-colors"
-              >
-                <MapPin className="w-4 h-4" />
-                View on Google Maps
-              </a>
-            </div>
+            </section>
 
           </motion.div>
 
-          {/* Contact Form */}
-          <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }}>
-            <div className="bg-card border border-border p-8 rounded-2xl shadow-lg">
-              <h3 className="font-serif text-2xl font-bold text-foreground mb-2">Send us a Message</h3>
+          {/* Right Column — Contact Form */}
+          <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }} className="lg:order-2">
+            <section aria-labelledby="form-heading" className="bg-card border border-border p-8 rounded-2xl shadow-lg">
+              <h2 id="form-heading" className="font-serif text-2xl font-bold text-foreground mb-2">Contact Form</h2>
               <p className="text-muted-foreground mb-8">Fill out the form below and we'll reply as soon as possible.</p>
 
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" aria-label="Contact form">
+
                   <div className="grid sm:grid-cols-2 gap-6">
                     <FormField control={form.control} name="name" render={({ field }) => (
                       <FormItem>
@@ -171,7 +152,7 @@ export default function Contact() {
                         <FormMessage />
                       </FormItem>
                     )} />
-                    
+
                     <FormField control={form.control} name="phone" render={({ field }) => (
                       <FormItem>
                         <FormLabel>Phone Number</FormLabel>
@@ -210,7 +191,38 @@ export default function Contact() {
                   </Button>
                 </form>
               </Form>
-            </div>
+            </section>
+          </motion.div>
+
+          {/* Location Map — Full Width */}
+          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="lg:order-3 lg:col-span-2">
+            <section aria-labelledby="map-heading" className="w-full rounded-2xl overflow-hidden border border-border shadow-sm">
+              <div className="bg-secondary px-6 py-4">
+                <h2 id="map-heading" className="font-serif text-xl font-bold text-white flex items-center gap-2">
+                  <MapPin className="w-5 h-5 text-primary" />
+                  Location Map
+                </h2>
+              </div>
+              <iframe
+                title="Anglo Sanskrit Senior Secondary School, Pundri Location"
+                src="https://maps.google.com/maps?q=Anglo+Sanskrit+Senior+Secondary+School+Pundri+Kaithal+Haryana&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="320"
+                style={{ border: 0, display: 'block' }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <a
+                href="https://maps.google.com/maps?q=Anglo+Sanskrit+Senior+Secondary+School+Pundri+Kaithal+Haryana"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 py-3 bg-primary text-white text-sm font-semibold hover:bg-primary/90 transition-colors"
+              >
+                <MapPin className="w-4 h-4" />
+                View on Google Maps
+              </a>
+            </section>
           </motion.div>
 
         </div>

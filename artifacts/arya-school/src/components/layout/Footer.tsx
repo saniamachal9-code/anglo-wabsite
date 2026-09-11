@@ -33,7 +33,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="flex flex-col gap-4">
-            <h3 className="font-serif text-lg font-semibold text-white">Quick Links</h3>
+            <h2 className="font-serif text-lg font-semibold text-white">Quick Links</h2>
             <nav className="flex flex-col gap-3">
               <Link href="/about" className="text-sm text-secondary-foreground/80 hover:text-primary transition-colors w-fit">About the School</Link>
               <Link href="/academics" className="text-sm text-secondary-foreground/80 hover:text-primary transition-colors w-fit">Academics & Curriculum</Link>
@@ -45,7 +45,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="flex flex-col gap-4">
-            <h3 className="font-serif text-lg font-semibold text-white">Contact Us</h3>
+            <h2 className="font-serif text-lg font-semibold text-white">Contact Us</h2>
             <ul className="flex flex-col gap-4">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
@@ -71,7 +71,7 @@ export default function Footer() {
 
           {/* Visiting Hours */}
           <div className="flex flex-col gap-4">
-            <h3 className="font-serif text-lg font-semibold text-white">Office Hours</h3>
+            <h2 className="font-serif text-lg font-semibold text-white">Office Hours</h2>
             <ul className="flex flex-col gap-4">
               <li className="flex items-start gap-3">
                 <Clock className="h-5 w-5 text-primary shrink-0 mt-0.5" />
